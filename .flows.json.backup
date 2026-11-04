@@ -1,0 +1,3291 @@
+[
+    {
+        "id": "9f0d51ab91d1",
+        "type": "tab",
+        "label": "MQTT Mosquitto Demo",
+        "disabled": false,
+        "locked": true,
+        "info": ""
+    },
+    {
+        "id": "70cb934bfb4cf11a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a11ce00000000001",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "658d09fdf1e71848",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f0dbd36c979f6c8f",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4101249549358c59",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "tab_bridge",
+        "type": "tab",
+        "label": "Puente MQTT local-nube",
+        "disabled": false,
+        "info": "Puente entre Mosquitto local y HiveMQ Cloud.\nLocal -> Nube: casa/temp, casa/hum, casa/led\nNube -> Local: casa/boton"
+    },
+    {
+        "id": "4ec570b40bc37975",
+        "type": "tab",
+        "label": "Puente MQTT casa_john1",
+        "disabled": false,
+        "info": "Puente entre Mosquitto local y broker.hivemq.com (publico).\nLocal -> Nube: casa_john1/temp, hum, led\nNube -> Local: casa_john1/boton"
+    },
+    {
+        "id": "910f09bbeb77ee10",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "406a4a5d428948a6",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b7f0c0de8441",
+        "type": "mqtt-broker",
+        "name": "Mosquitto local",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a11ce00000000002",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "teal",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a11ce00000000003",
+        "type": "ui_tab",
+        "name": "Ejemplo 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a11ce00000000011",
+        "type": "ui_group",
+        "name": "Group1",
+        "tab": "a11ce00000000003",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a11ce00000000012",
+        "type": "ui_group",
+        "name": "Group2",
+        "tab": "a11ce00000000003",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a11ce00000000013",
+        "type": "ui_group",
+        "name": "Group3",
+        "tab": "a11ce00000000003",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a11ce00000000014",
+        "type": "ui_group",
+        "name": "Group4",
+        "tab": "a11ce00000000003",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "554bc6a393305904",
+        "type": "mqtt-broker",
+        "name": "Mosquitto local",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "broker_local",
+        "type": "mqtt-broker",
+        "name": "mosquitto local",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "nodered_local",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "tls_hivemq",
+        "type": "tls-config",
+        "name": "tls hivemq",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "broker_cloud",
+        "type": "mqtt-broker",
+        "name": "hivemq publico",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "tls": "tls_hivemq",
+        "clientid": "nodered_cloud",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a1f2b3c42251",
+        "type": "mqtt in",
+        "z": "9f0d51ab91d1",
+        "name": "",
+        "topic": "FIC/6B/#",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "b7f0c0de8441",
+        "inputs": 0,
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "d4e5f6a73361"
+            ]
+        ]
+    },
+    {
+        "id": "d4e5f6a73361",
+        "type": "debug",
+        "z": "9f0d51ab91d1",
+        "name": "Mensaje MQTTX",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b2c3d4e61181",
+        "type": "mqtt out",
+        "z": "9f0d51ab91d1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b7f0c0de8441",
+        "x": 640,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c1d2e3f52271",
+        "type": "inject",
+        "z": "9f0d51ab91d1",
+        "name": "Enviar a MQTTX",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "vt": "str",
+                "p": "topic"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "FIC/6B/demo",
+        "payload": "Hola desde Node-RED",
+        "payloadType": "str",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "b2c3d4e61181"
+            ]
+        ]
+    },
+    {
+        "id": "f29c83a5571507a5",
+        "type": "debug",
+        "z": "70cb934bfb4cf11a",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "30a34cbf4a4bdd6d",
+        "type": "inject",
+        "z": "70cb934bfb4cf11a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temp\":23.3,\"hum\":88.8}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "f29c83a5571507a5"
+            ]
+        ]
+    },
+    {
+        "id": "725c45e12d0988c3",
+        "type": "inject",
+        "z": "70cb934bfb4cf11a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "template",
+                "v": "23.33",
+                "vt": "num"
+            },
+            {
+                "p": "hum",
+                "v": "72.34",
+                "vt": "num"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola mundo",
+        "payloadType": "str",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "d123f0d552c94c5f"
+            ]
+        ]
+    },
+    {
+        "id": "d123f0d552c94c5f",
+        "type": "random",
+        "z": "70cb934bfb4cf11a",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "7cb93e76ccbddc98"
+            ]
+        ]
+    },
+    {
+        "id": "7cb93e76ccbddc98",
+        "type": "function",
+        "z": "70cb934bfb4cf11a",
+        "name": "function 1",
+        "func": "if (msg.payload > 50) {\n    msg.payload = \"Alarma mayor a 50\";\n} else {\n    msg = null;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 280,
+        "wires": [
+            [
+                "f29c83a5571507a5"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000021",
+        "type": "inject",
+        "z": "a11ce00000000001",
+        "name": "Hola!",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola!",
+        "payloadType": "str",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "a11ce00000000022"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000022",
+        "type": "random",
+        "z": "a11ce00000000001",
+        "name": "",
+        "low": 0,
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "a11ce00000000023",
+                "a11ce00000000024",
+                "a11ce00000000025",
+                "a11ce00000000026"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000023",
+        "type": "ui_text",
+        "z": "a11ce00000000001",
+        "group": "a11ce00000000011",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Number:",
+        "format": "{{msg.payload.toFixed(2)}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#eeeeee",
+        "x": 760,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a11ce00000000024",
+        "type": "ui_toast",
+        "z": "a11ce00000000001",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 760,
+        "y": 150,
+        "wires": []
+    },
+    {
+        "id": "a11ce00000000025",
+        "type": "ui_chart",
+        "z": "a11ce00000000001",
+        "name": "",
+        "group": "a11ce00000000012",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "label": "Chart:",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 760,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a11ce00000000026",
+        "type": "ui_gauge",
+        "z": "a11ce00000000001",
+        "name": "",
+        "group": "a11ce00000000013",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Gauge:",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#e53935",
+            "#e53935",
+            "#e53935"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 290,
+        "wires": []
+    },
+    {
+        "id": "a11ce00000000061",
+        "type": "ui_switch",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "a11ce00000000011",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1180,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a11ce00000000062",
+        "type": "ui_gauge",
+        "z": "a11ce00000000001",
+        "name": "",
+        "group": "a11ce00000000011",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#9e9e9e",
+            "#9e9e9e",
+            "#9e9e9e"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1180,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a11ce00000000031",
+        "type": "ui_button",
+        "z": "a11ce00000000001",
+        "name": "Button",
+        "group": "a11ce00000000014",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "BUTTON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "a11ce00000000034"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000032",
+        "type": "ui_switch",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "Switch",
+        "tooltip": "",
+        "group": "a11ce00000000014",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "a11ce00000000034"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000033",
+        "type": "ui_slider",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "Slider",
+        "tooltip": "",
+        "group": "a11ce00000000014",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 450,
+        "y": 500,
+        "wires": [
+            [
+                "a11ce00000000034"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000034",
+        "type": "ui_chart",
+        "z": "a11ce00000000001",
+        "name": "",
+        "group": "a11ce00000000014",
+        "order": 8,
+        "width": 6,
+        "height": 4,
+        "label": "Chart:",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a11ce00000000041",
+        "type": "ui_date_picker",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "Date",
+        "group": "a11ce00000000014",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "a11ce00000000042"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000042",
+        "type": "ui_text",
+        "z": "a11ce00000000001",
+        "group": "a11ce00000000013",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Datetime",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#eeeeee",
+        "x": 720,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a11ce00000000051",
+        "type": "ui_numeric",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "Numeric",
+        "tooltip": "",
+        "group": "a11ce00000000014",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 440,
+        "y": 680,
+        "wires": [
+            [
+                "a11ce00000000054"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000052",
+        "type": "ui_text_input",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "Text Input",
+        "tooltip": "",
+        "group": "a11ce00000000014",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 440,
+        "y": 760,
+        "wires": [
+            [
+                "a11ce00000000054"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000053",
+        "type": "ui_colour_picker",
+        "z": "a11ce00000000001",
+        "name": "",
+        "label": "",
+        "group": "a11ce00000000014",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 450,
+        "y": 820,
+        "wires": [
+            [
+                "a11ce00000000054"
+            ]
+        ]
+    },
+    {
+        "id": "a11ce00000000054",
+        "type": "ui_toast",
+        "z": "a11ce00000000001",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d89dac1b7a4c2ccc",
+        "type": "mqtt in",
+        "z": "658d09fdf1e71848",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bdedd674af20217",
+        "type": "inject",
+        "z": "658d09fdf1e71848",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b3be9f9f6fd46afb",
+        "type": "mqtt out",
+        "z": "f0dbd36c979f6c8f",
+        "name": "",
+        "topic": "FIC/6B/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "554bc6a393305904",
+        "x": 500,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "05b7fccdce040319",
+        "type": "inject",
+        "z": "f0dbd36c979f6c8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "FIC/6B/",
+        "payload": "asd",
+        "payloadType": "str",
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "b3be9f9f6fd46afb"
+            ]
+        ]
+    },
+    {
+        "id": "527aeafcc6bbcab9",
+        "type": "mqtt in",
+        "z": "f0dbd36c979f6c8f",
+        "name": "",
+        "topic": "FIC/6B/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "554bc6a393305904",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "8f301a9994386f65"
+            ]
+        ]
+    },
+    {
+        "id": "8f301a9994386f65",
+        "type": "debug",
+        "z": "f0dbd36c979f6c8f",
+        "name": "Mqtt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "34d45e0def8fd280",
+        "type": "mqtt out",
+        "z": "4101249549358c59",
+        "name": "",
+        "topic": "FIC/6B/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "554bc6a393305904",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2f0db972a7f498f0",
+        "type": "inject",
+        "z": "4101249549358c59",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "FIC/6B/",
+        "payload": "Hola soy Jim",
+        "payloadType": "str",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19a38df930895af1",
+        "type": "mqtt in",
+        "z": "4101249549358c59",
+        "name": "",
+        "topic": "FIC/6B/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "554bc6a393305904",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [
+                "a8531b33cfbc8eda"
+            ]
+        ]
+    },
+    {
+        "id": "a8531b33cfbc8eda",
+        "type": "debug",
+        "z": "4101249549358c59",
+        "name": "Mqtt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a0bf694f3c561baa",
+        "type": "random",
+        "z": "4101249549358c59",
+        "name": "Humedad",
+        "low": "18",
+        "high": "100",
+        "inte": "true",
+        "property": "payload.hum",
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "864b7bf8951dd10e"
+            ]
+        ]
+    },
+    {
+        "id": "864b7bf8951dd10e",
+        "type": "random",
+        "z": "4101249549358c59",
+        "name": "Temperatura",
+        "low": "18",
+        "high": "50",
+        "inte": "false",
+        "property": "payload.temp",
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "34d45e0def8fd280",
+                "b64a93533dc37977"
+            ]
+        ]
+    },
+    {
+        "id": "3b5a9f8fce555f12",
+        "type": "inject",
+        "z": "4101249549358c59",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "FIC/6B/THC",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "a0bf694f3c561baa"
+            ]
+        ]
+    },
+    {
+        "id": "b64a93533dc37977",
+        "type": "debug",
+        "z": "4101249549358c59",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "comment_ab",
+        "type": "comment",
+        "z": "tab_bridge",
+        "name": "LOCAL -> NUBE (temp, hum, led)",
+        "info": "",
+        "x": 200,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "in_temp",
+        "type": "mqtt in",
+        "z": "tab_bridge",
+        "name": "temp (local)",
+        "topic": "casa/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "out_cloud",
+                "dbg_local"
+            ]
+        ]
+    },
+    {
+        "id": "in_hum",
+        "type": "mqtt in",
+        "z": "tab_bridge",
+        "name": "hum (local)",
+        "topic": "casa/hum",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "out_cloud",
+                "dbg_local"
+            ]
+        ]
+    },
+    {
+        "id": "in_led",
+        "type": "mqtt in",
+        "z": "tab_bridge",
+        "name": "led (local)",
+        "topic": "casa/led",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "out_cloud",
+                "dbg_local"
+            ]
+        ]
+    },
+    {
+        "id": "out_cloud",
+        "type": "mqtt out",
+        "z": "tab_bridge",
+        "name": "-> hivemq cloud",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_cloud",
+        "x": 440,
+        "y": 150,
+        "wires": []
+    },
+    {
+        "id": "dbg_local",
+        "type": "debug",
+        "z": "tab_bridge",
+        "name": "debug local->nube",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "comment_ba",
+        "type": "comment",
+        "z": "tab_bridge",
+        "name": "NUBE -> LOCAL (boton)",
+        "info": "",
+        "x": 180,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "in_boton",
+        "type": "mqtt in",
+        "z": "tab_bridge",
+        "name": "boton (nube)",
+        "topic": "casa/boton",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_cloud",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 390,
+        "wires": [
+            [
+                "out_local",
+                "dbg_cloud"
+            ]
+        ]
+    },
+    {
+        "id": "out_local",
+        "type": "mqtt out",
+        "z": "tab_bridge",
+        "name": "-> mosquitto local",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_local",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "dbg_cloud",
+        "type": "debug",
+        "z": "tab_bridge",
+        "name": "debug nube->local",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4901bd50f4bf02d8",
+        "type": "comment",
+        "z": "4ec570b40bc37975",
+        "name": "LOCAL -> NUBE (temp, hum, led)",
+        "info": "",
+        "x": 200,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ac1a470da1782869",
+        "type": "mqtt in",
+        "z": "4ec570b40bc37975",
+        "name": "temp (local)",
+        "topic": "casa_john1/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "39f250dea6a0addf",
+                "415f4eb6b5b1175f"
+            ]
+        ]
+    },
+    {
+        "id": "e13dd7b7504d77d8",
+        "type": "mqtt in",
+        "z": "4ec570b40bc37975",
+        "name": "hum (local)",
+        "topic": "casa_john1/hum",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "39f250dea6a0addf",
+                "415f4eb6b5b1175f"
+            ]
+        ]
+    },
+    {
+        "id": "5b982cdc5df66cfc",
+        "type": "mqtt in",
+        "z": "4ec570b40bc37975",
+        "name": "led (local)",
+        "topic": "casa_john1/led",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_local",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "39f250dea6a0addf",
+                "415f4eb6b5b1175f"
+            ]
+        ]
+    },
+    {
+        "id": "39f250dea6a0addf",
+        "type": "mqtt out",
+        "z": "4ec570b40bc37975",
+        "name": "-> hivemq publico",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_cloud",
+        "x": 490,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "415f4eb6b5b1175f",
+        "type": "debug",
+        "z": "4ec570b40bc37975",
+        "name": "debug local->nube",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fdaddbccecabbbb4",
+        "type": "comment",
+        "z": "4ec570b40bc37975",
+        "name": "NUBE -> LOCAL (boton)",
+        "info": "",
+        "x": 180,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "892ca284d2183ab0",
+        "type": "mqtt in",
+        "z": "4ec570b40bc37975",
+        "name": "boton (nube)",
+        "topic": "casa_john1/boton",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_cloud",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 390,
+        "wires": [
+            [
+                "a251534b242f51df",
+                "e6a9c0429f0e1bc2"
+            ]
+        ]
+    },
+    {
+        "id": "a251534b242f51df",
+        "type": "mqtt out",
+        "z": "4ec570b40bc37975",
+        "name": "-> mosquitto local",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_local",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e6a9c0429f0e1bc2",
+        "type": "debug",
+        "z": "4ec570b40bc37975",
+        "name": "debug nube->local",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d36ff4f8e8e3d674",
+        "type": "inject",
+        "z": "910f09bbeb77ee10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "da866cc7a0c81b70"
+            ]
+        ]
+    },
+    {
+        "id": "7e3ec3241c31a911",
+        "type": "debug",
+        "z": "910f09bbeb77ee10",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "da866cc7a0c81b70",
+        "type": "http request",
+        "z": "910f09bbeb77ee10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.example.com",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "7e3ec3241c31a911"
+            ]
+        ]
+    },
+    {
+        "id": "c1a1e00000000001",
+        "type": "tab",
+        "label": "Cliente Sensor",
+        "disabled": false,
+        "info": "Cliente MQTT publicador. Simula AQI, CO2 y PM2.5 y publica el estado del sistema. No usa nodos function: los valores salen del nodo random y el JSON del estado se arma con un nodo change (JSONata) leyendo el contexto del flujo.\n\nTópicos:\n- iot/laboratorio/calidad-aire/aqi\n- iot/laboratorio/calidad-aire/co2\n- iot/laboratorio/calidad-aire/pm25\n- iot/laboratorio/calidad-aire/sistema/estado\n\nBróker: Mosquitto local 127.0.0.1:1883. ClientId: cliente-sensor-calidad-aire."
+    },
+    {
+        "id": "c1a1e00000000002",
+        "type": "tab",
+        "label": "Cliente Dashboard",
+        "disabled": false,
+        "info": "Cliente MQTT suscriptor. Recibe cada variable en su tópico y la muestra en el dashboard (http://127.0.0.1:1880/dashboard). ClientId: cliente-dashboard-calidad-aire. No usa nodos function."
+    },
+    {
+        "id": "c1a1e00000000003",
+        "type": "mqtt-broker",
+        "name": "Cliente MQTT Sensor",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "cliente-sensor-calidad-aire",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": "",
+        "info": "Cliente MQTT independiente contra el bróker Mosquitto local (127.0.0.1:1883). Cada pestaña usa su propio cliente, con un clientId distinto."
+    },
+    {
+        "id": "c1a1e00000000004",
+        "type": "mqtt-broker",
+        "name": "Cliente MQTT Dashboard",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "cliente-dashboard-calidad-aire",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": "",
+        "info": "Cliente MQTT independiente contra el bróker Mosquitto local (127.0.0.1:1883). Cada pestaña usa su propio cliente, con un clientId distinto."
+    },
+    {
+        "id": "c1a1e00000000005",
+        "type": "ui-base",
+        "name": "Dashboard Calidad del Aire",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "none",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false,
+        "info": "Configuración del dashboard. Se abre en http://127.0.0.1:1880/dashboard"
+    },
+    {
+        "id": "c1a1e00000000006",
+        "type": "ui-theme",
+        "name": "Tema laboratorio",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0d7377",
+            "bgPage": "#e7f2f2",
+            "groupBg": "#ffffff",
+            "groupOutline": "#b7d0d0"
+        },
+        "sizes": {
+            "density": "compact",
+            "pagePadding": "8px",
+            "groupGap": "8px",
+            "groupBorderRadius": "8px",
+            "widgetGap": "6px"
+        },
+        "info": "Tema visual del dashboard de monitoreo ambiental."
+    },
+    {
+        "id": "c1a1e00000000007",
+        "type": "ui-page",
+        "name": "Calidad del aire",
+        "ui": "c1a1e00000000005",
+        "path": "/",
+        "icon": "mdi-air-filter",
+        "layout": "grid",
+        "theme": "c1a1e00000000006",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 12
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 12
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 12
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "info": "Página única del monitoreo. En escritorio usa 12 columnas para ver sensores, gráficos y estado a la vez."
+    },
+    {
+        "id": "c1a1e00000000008",
+        "type": "ui-group",
+        "name": "Calidad del aire (AQI)",
+        "page": "c1a1e00000000007",
+        "width": 4,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Gauge de AQI con color según el nivel EPA y texto del nivel."
+    },
+    {
+        "id": "c1a1e00000000009",
+        "type": "ui-group",
+        "name": "Dióxido de carbono (CO₂)",
+        "page": "c1a1e00000000007",
+        "width": 4,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Gauge de concentración de CO₂ en ppm."
+    },
+    {
+        "id": "c1a1e0000000000a",
+        "type": "ui-group",
+        "name": "Partículas PM2.5",
+        "page": "c1a1e00000000007",
+        "width": 4,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Gauge de PM2.5 en µg/m³."
+    },
+    {
+        "id": "c1a1e0000000000b",
+        "type": "ui-group",
+        "name": "Historial de CO₂",
+        "page": "c1a1e00000000007",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Gráfico temporal de CO₂. Cada punto llega por MQTT cada 2 minutos."
+    },
+    {
+        "id": "c1a1e0000000000c",
+        "type": "ui-group",
+        "name": "Historial de PM2.5",
+        "page": "c1a1e00000000007",
+        "width": 6,
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Gráfico temporal de PM2.5. Cada punto llega por MQTT cada 30 segundos."
+    },
+    {
+        "id": "c1a1e0000000000d",
+        "type": "ui-group",
+        "name": "Estado del sistema",
+        "page": "c1a1e00000000007",
+        "width": 12,
+        "height": 1,
+        "order": 6,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "info": "Nombre, ubicación, ventilación (texto y switch) y alarmas booleanas."
+    },
+    {
+        "id": "c1a1e10000000002",
+        "type": "inject",
+        "z": "c1a1e00000000001",
+        "name": "Disparo AQI cada 1 min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.4",
+        "topic": "iot/laboratorio/calidad-aire/aqi",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "c1a1e10000000003"
+            ]
+        ],
+        "info": "Dispara la simulación al arrancar y después cada 60 segundos."
+    },
+    {
+        "id": "c1a1e10000000003",
+        "type": "random",
+        "z": "c1a1e00000000001",
+        "name": "AQI aleatorio 0 a 500",
+        "low": "0",
+        "high": "500",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "c1a1e10000000004"
+            ]
+        ],
+        "info": "Entero aleatorio inclusive de 0 a 500. El low va como texto \"0\" porque el nodo random ignora el número 0."
+    },
+    {
+        "id": "c1a1e10000000004",
+        "type": "change",
+        "z": "c1a1e00000000001",
+        "name": "Guardar AQI en el flujo",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aqi",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "c1a1e10000000005",
+                "c1a1e10000000006"
+            ]
+        ],
+        "info": "Copia msg.payload al contexto del flujo (flow.aqi) para tener la última lectura junto a las demás variables."
+    },
+    {
+        "id": "c1a1e10000000005",
+        "type": "mqtt out",
+        "z": "c1a1e00000000001",
+        "name": "Publicar AQI",
+        "topic": "iot/laboratorio/calidad-aire/aqi",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c1a1e00000000003",
+        "x": 980,
+        "y": 80,
+        "wires": [],
+        "info": "Publica solo el número en iot/laboratorio/calidad-aire/aqi. QoS 0 y retain para que el dashboard reciba el último valor al conectarse."
+    },
+    {
+        "id": "c1a1e10000000006",
+        "type": "debug",
+        "z": "c1a1e00000000001",
+        "name": "Debug publicación AQI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 140,
+        "wires": [],
+        "info": "Valida en la barra lateral y en el estado del nodo el valor que se acaba de publicar."
+    },
+    {
+        "id": "c1a1e10000000012",
+        "type": "inject",
+        "z": "c1a1e00000000001",
+        "name": "Disparo CO2 cada 2 min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.8",
+        "topic": "iot/laboratorio/calidad-aire/co2",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "c1a1e10000000013"
+            ]
+        ],
+        "info": "Dispara la simulación al arrancar y después cada 120 segundos."
+    },
+    {
+        "id": "c1a1e10000000013",
+        "type": "random",
+        "z": "c1a1e00000000001",
+        "name": "CO2 aleatorio 300 a 2000",
+        "low": "300",
+        "high": "2000",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "c1a1e10000000014"
+            ]
+        ],
+        "info": "Entero aleatorio inclusive de 300 a 2000 ppm."
+    },
+    {
+        "id": "c1a1e10000000014",
+        "type": "change",
+        "z": "c1a1e00000000001",
+        "name": "Guardar CO2 en el flujo",
+        "rules": [
+            {
+                "t": "set",
+                "p": "co2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 280,
+        "wires": [
+            [
+                "c1a1e10000000015",
+                "c1a1e10000000016"
+            ]
+        ],
+        "info": "Guarda la última concentración en flow.co2. El JSON de estado lee este valor cada minuto."
+    },
+    {
+        "id": "c1a1e10000000015",
+        "type": "mqtt out",
+        "z": "c1a1e00000000001",
+        "name": "Publicar CO2",
+        "topic": "iot/laboratorio/calidad-aire/co2",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c1a1e00000000003",
+        "x": 980,
+        "y": 260,
+        "wires": [],
+        "info": "Publica solo el número (ppm) en iot/laboratorio/calidad-aire/co2."
+    },
+    {
+        "id": "c1a1e10000000016",
+        "type": "debug",
+        "z": "c1a1e00000000001",
+        "name": "Debug publicación CO2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 320,
+        "wires": [],
+        "info": "Muestra el ppm publicado para comprobar el tópico y el periodo."
+    },
+    {
+        "id": "c1a1e10000000022",
+        "type": "inject",
+        "z": "c1a1e00000000001",
+        "name": "Disparo PM2.5 cada 30 s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.2",
+        "topic": "iot/laboratorio/calidad-aire/pm25",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "c1a1e10000000023"
+            ]
+        ],
+        "info": "Dispara la simulación al arrancar y después cada 30 segundos."
+    },
+    {
+        "id": "c1a1e10000000023",
+        "type": "random",
+        "z": "c1a1e00000000001",
+        "name": "PM2.5 aleatorio 0 a 250",
+        "low": "0",
+        "high": "250",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "c1a1e10000000024"
+            ]
+        ],
+        "info": "Entero aleatorio inclusive de 0 a 250 µg/m³."
+    },
+    {
+        "id": "c1a1e10000000024",
+        "type": "change",
+        "z": "c1a1e00000000001",
+        "name": "Guardar PM2.5 en el flujo",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pm25",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 460,
+        "wires": [
+            [
+                "c1a1e10000000025",
+                "c1a1e10000000026"
+            ]
+        ],
+        "info": "Guarda la última lectura en flow.pm25 para calcular la alarma del estado."
+    },
+    {
+        "id": "c1a1e10000000025",
+        "type": "mqtt out",
+        "z": "c1a1e00000000001",
+        "name": "Publicar PM2.5",
+        "topic": "iot/laboratorio/calidad-aire/pm25",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c1a1e00000000003",
+        "x": 980,
+        "y": 440,
+        "wires": [],
+        "info": "Publica solo el número en iot/laboratorio/calidad-aire/pm25."
+    },
+    {
+        "id": "c1a1e10000000026",
+        "type": "debug",
+        "z": "c1a1e00000000001",
+        "name": "Debug publicación PM2.5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 500,
+        "wires": [],
+        "info": "Muestra el valor de PM2.5 recién publicado."
+    },
+    {
+        "id": "c1a1e10000000032",
+        "type": "inject",
+        "z": "c1a1e00000000001",
+        "name": "Disparo estado cada 1 min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "iot/laboratorio/calidad-aire/sistema/estado",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 660,
+        "wires": [
+            [
+                "c1a1e10000000033"
+            ]
+        ],
+        "info": "Espera 3 segundos al inicio para que AQI, CO2 y PM2.5 hayan guardado su primera lectura, y luego repite cada 60 segundos."
+    },
+    {
+        "id": "c1a1e10000000033",
+        "type": "change",
+        "z": "c1a1e00000000001",
+        "name": "Armar JSON de estado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\n  $co2 := $flowContext(\"co2\");\n  $pm := $flowContext(\"pm25\");\n  $alarmaCO2 := $exists($co2) and $co2 > 1000;\n  $alarmaPM25 := $exists($pm) and $pm > 55;\n  {\n    \"sistema\": {\n      \"nombre\": \"Monitoreo Ambiental Inteligente\",\n      \"ubicacion\": \"Laboratorio IoT\",\n      \"estado\": {\n        \"ventilacion\": ($alarmaCO2 or $alarmaPM25) ? \"encendida\" : \"apagada\",\n        \"alarmaCO2\": $alarmaCO2,\n        \"alarmaPM25\": $alarmaPM25\n      }\n    }\n  }\n)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "c1a1e10000000034",
+                "c1a1e10000000035"
+            ]
+        ],
+        "info": "Sustituye msg.payload por el objeto sistema/nombre/ubicacion/estado. No es un nodo function: es una expresión JSONata que lee flow.co2 y flow.pm25."
+    },
+    {
+        "id": "c1a1e10000000034",
+        "type": "mqtt out",
+        "z": "c1a1e00000000001",
+        "name": "Publicar estado JSON",
+        "topic": "iot/laboratorio/calidad-aire/sistema/estado",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c1a1e00000000003",
+        "x": 760,
+        "y": 640,
+        "wires": [],
+        "info": "Publica el objeto en un tópico independiente del de los sensores. MQTT lo envía como JSON."
+    },
+    {
+        "id": "c1a1e10000000035",
+        "type": "debug",
+        "z": "c1a1e00000000001",
+        "name": "Debug publicación estado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 700,
+        "wires": [],
+        "info": "Muestra el JSON completo antes de que salga al bróker, para validar nombre, ubicación, ventilación y alarmas."
+    },
+    {
+        "id": "c1a1e20000000002",
+        "type": "mqtt in",
+        "z": "c1a1e00000000002",
+        "name": "Recibir AQI",
+        "topic": "iot/laboratorio/calidad-aire/aqi",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c1a1e00000000004",
+        "inputs": 0,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "c1a1e20000000003",
+                "c1a1e20000000004",
+                "c1a1e20000000005"
+            ]
+        ],
+        "info": "Suscripción del cliente dashboard al tópico del índice AQI. El payload llega como número."
+    },
+    {
+        "id": "c1a1e20000000003",
+        "type": "debug",
+        "z": "c1a1e00000000002",
+        "name": "Debug recepción AQI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 80,
+        "wires": [],
+        "info": "Confirma que el mensaje MQTT de AQI llegó a este cliente."
+    },
+    {
+        "id": "c1a1e20000000004",
+        "type": "ui-gauge",
+        "z": "c1a1e00000000002",
+        "name": "Gauge AQI",
+        "group": "c1a1e00000000008",
+        "order": 1,
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Índice AQI",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "AQI",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#00e400",
+                "from": 0
+            },
+            {
+                "color": "#ffff00",
+                "from": 51
+            },
+            {
+                "color": "#ff7e00",
+                "from": 101
+            },
+            {
+                "color": "#ff0000",
+                "from": 151
+            },
+            {
+                "color": "#8f3f97",
+                "from": 201
+            },
+            {
+                "color": "#7e0023",
+                "from": 301
+            }
+        ],
+        "min": 0,
+        "max": 500,
+        "sizeThickness": 18,
+        "sizeGap": 3,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 460,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "info": "Indicador de color por nivel EPA: verde 0-50, amarillo 51-100, naranja 101-150, rojo 151-200, morado 201-300, granate 301-500."
+    },
+    {
+        "id": "c1a1e20000000005",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Clasificar nivel AQI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ui_update.color",
+                "pt": "msg",
+                "to": "(\n  $v := $number(payload);\n  $v <= 50 ? \"#1b8a2f\" : $v <= 100 ? \"#b8860b\" : $v <= 150 ? \"#e65100\" : $v <= 200 ? \"#c62828\" : $v <= 300 ? \"#6a1b9a\" : \"#7e0023\"\n)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\n  $v := $number(payload);\n  $v <= 50 ? \"Bueno\" : $v <= 100 ? \"Moderado\" : $v <= 150 ? \"Sensible\" : $v <= 200 ? \"Dañino\" : $v <= 300 ? \"Muy dañino\" : \"Peligroso\"\n)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [
+                "c1a1e20000000006"
+            ]
+        ],
+        "info": "Traduce el número a un nombre de nivel y a un color de texto. Se calcula el color antes de reemplazar el payload."
+    },
+    {
+        "id": "c1a1e20000000006",
+        "type": "ui-text",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e00000000008",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "Texto nivel AQI",
+        "label": "Nivel",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Segoe UI",
+        "fontSize": 18,
+        "color": "#1a1a1a",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1040,
+        "y": 200,
+        "wires": [],
+        "info": "Muestra el nombre del nivel. El color del texto acompaña al color del gauge."
+    },
+    {
+        "id": "c1a1e20000000012",
+        "type": "mqtt in",
+        "z": "c1a1e00000000002",
+        "name": "Recibir CO2",
+        "topic": "iot/laboratorio/calidad-aire/co2",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c1a1e00000000004",
+        "inputs": 0,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "c1a1e20000000013",
+                "c1a1e20000000014",
+                "c1a1e20000000015"
+            ]
+        ],
+        "info": "Suscripción al tópico de CO₂. El payload es la concentración en ppm."
+    },
+    {
+        "id": "c1a1e20000000013",
+        "type": "debug",
+        "z": "c1a1e00000000002",
+        "name": "Debug recepción CO2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 320,
+        "wires": [],
+        "info": "Valida la llegada de cada muestra de CO₂."
+    },
+    {
+        "id": "c1a1e20000000014",
+        "type": "ui-gauge",
+        "z": "c1a1e00000000002",
+        "name": "Gauge CO2",
+        "group": "c1a1e00000000009",
+        "order": 1,
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "CO₂",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "ppm",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#00e400",
+                "from": 300
+            },
+            {
+                "color": "#ffff00",
+                "from": 800
+            },
+            {
+                "color": "#ff7e00",
+                "from": 1000
+            },
+            {
+                "color": "#ff0000",
+                "from": 1500
+            }
+        ],
+        "min": 300,
+        "max": 2000,
+        "sizeThickness": 18,
+        "sizeGap": 3,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 460,
+        "y": 380,
+        "wires": [
+            []
+        ],
+        "info": "Verde por debajo de 800 ppm, amarillo hasta 1000, naranja hasta 1500 y rojo hasta 2000."
+    },
+    {
+        "id": "c1a1e20000000015",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Serie del gráfico CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "CO2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 440,
+        "wires": [
+            [
+                "c1a1e20000000016"
+            ]
+        ],
+        "info": "Pone en msg.topic el nombre corto de la serie. El gráfico usa msg.topic como categoría y msg.payload como valor."
+    },
+    {
+        "id": "c1a1e20000000016",
+        "type": "ui-chart",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e0000000000b",
+        "name": "Gráfico CO2",
+        "label": "CO₂ (ppm)",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Tiempo",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "ppm",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "300",
+        "ymax": "2000",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 3,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0d7377"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 4,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1040,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "info": "Gráfico de línea. Conserva la última hora de muestras. El eje Y está fijo de 300 a 2000 ppm."
+    },
+    {
+        "id": "c1a1e20000000022",
+        "type": "mqtt in",
+        "z": "c1a1e00000000002",
+        "name": "Recibir PM2.5",
+        "topic": "iot/laboratorio/calidad-aire/pm25",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c1a1e00000000004",
+        "inputs": 0,
+        "x": 160,
+        "y": 620,
+        "wires": [
+            [
+                "c1a1e20000000023",
+                "c1a1e20000000024",
+                "c1a1e20000000025"
+            ]
+        ],
+        "info": "Suscripción al tópico de PM2.5. El payload es µg/m³."
+    },
+    {
+        "id": "c1a1e20000000023",
+        "type": "debug",
+        "z": "c1a1e00000000002",
+        "name": "Debug recepción PM2.5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 580,
+        "wires": [],
+        "info": "Valida la llegada de cada muestra de PM2.5."
+    },
+    {
+        "id": "c1a1e20000000024",
+        "type": "ui-gauge",
+        "z": "c1a1e00000000002",
+        "name": "Gauge PM2.5",
+        "group": "c1a1e0000000000a",
+        "order": 1,
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "PM2.5",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "µg/m³",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#00e400",
+                "from": 0
+            },
+            {
+                "color": "#ffff00",
+                "from": 12
+            },
+            {
+                "color": "#ff7e00",
+                "from": 35
+            },
+            {
+                "color": "#ff0000",
+                "from": 55
+            },
+            {
+                "color": "#8f3f97",
+                "from": 150
+            }
+        ],
+        "min": 0,
+        "max": 250,
+        "sizeThickness": 18,
+        "sizeGap": 3,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 460,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "info": "Verde 0-12, amarillo hasta 35, naranja hasta 55, rojo hasta 150 y morado por encima de 150 µg/m³."
+    },
+    {
+        "id": "c1a1e20000000025",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Serie del gráfico PM2.5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PM2.5",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 700,
+        "wires": [
+            [
+                "c1a1e20000000026"
+            ]
+        ],
+        "info": "Nombre corto de la serie temporal de PM2.5."
+    },
+    {
+        "id": "c1a1e20000000026",
+        "type": "ui-chart",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e0000000000c",
+        "name": "Gráfico PM2.5",
+        "label": "PM2.5 (µg/m³)",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Tiempo",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "µg/m³",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "250",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 3,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#e67e22"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 4,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            []
+        ],
+        "info": "Gráfico de línea con eje Y de 0 a 250 µg/m³."
+    },
+    {
+        "id": "c1a1e20000000032",
+        "type": "mqtt in",
+        "z": "c1a1e00000000002",
+        "name": "Recibir estado",
+        "topic": "iot/laboratorio/calidad-aire/sistema/estado",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c1a1e00000000004",
+        "inputs": 0,
+        "x": 160,
+        "y": 900,
+        "wires": [
+            [
+                "c1a1e20000000033",
+                "c1a1e20000000034",
+                "c1a1e20000000035",
+                "c1a1e20000000036",
+                "c1a1e20000000037",
+                "c1a1e20000000038",
+                "c1a1e20000000039"
+            ]
+        ],
+        "info": "Suscripción al tópico independiente del estado. datatype auto convierte el JSON en objeto."
+    },
+    {
+        "id": "c1a1e20000000033",
+        "type": "debug",
+        "z": "c1a1e00000000002",
+        "name": "Debug recepción estado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 860,
+        "wires": [],
+        "info": "Muestra el JSON recibido para comprobar ventilación y las dos alarmas."
+    },
+    {
+        "id": "c1a1e20000000034",
+        "type": "ui-text",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e0000000000d",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "Texto nombre",
+        "label": "Sistema",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Segoe UI",
+        "fontSize": 18,
+        "color": "#1a1a1a",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.sistema.nombre",
+        "valueType": "msg",
+        "x": 760,
+        "y": 860,
+        "wires": [],
+        "info": "Lee sistema.nombre del JSON: Monitoreo Ambiental Inteligente."
+    },
+    {
+        "id": "c1a1e20000000035",
+        "type": "ui-text",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e0000000000d",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "Texto ubicación",
+        "label": "Ubicación",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Segoe UI",
+        "fontSize": 18,
+        "color": "#1a1a1a",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.sistema.ubicacion",
+        "valueType": "msg",
+        "x": 760,
+        "y": 920,
+        "wires": [],
+        "info": "Lee sistema.ubicacion: Laboratorio IoT."
+    },
+    {
+        "id": "c1a1e20000000036",
+        "type": "ui-text",
+        "z": "c1a1e00000000002",
+        "group": "c1a1e0000000000d",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "Texto ventilación",
+        "label": "Ventilación",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Segoe UI",
+        "fontSize": 18,
+        "color": "#1a1a1a",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.sistema.estado.ventilacion",
+        "valueType": "msg",
+        "x": 760,
+        "y": 980,
+        "wires": [],
+        "info": "Muestra el texto encendida o apagada."
+    },
+    {
+        "id": "c1a1e20000000037",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Extraer ventilación",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.sistema.estado.ventilacion",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 980,
+        "wires": [
+            [
+                "c1a1e20000000040"
+            ]
+        ],
+        "info": "Deja en msg.payload solo el texto encendida/apagada para que el switch pueda compararlo."
+    },
+    {
+        "id": "c1a1e20000000038",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Extraer alarma CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.sistema.estado.alarmaCO2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1060,
+        "wires": [
+            [
+                "c1a1e20000000041"
+            ]
+        ],
+        "info": "Deja en msg.payload el booleano alarmaCO2 para el indicador LED."
+    },
+    {
+        "id": "c1a1e20000000039",
+        "type": "change",
+        "z": "c1a1e00000000002",
+        "name": "Extraer alarma PM2.5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.sistema.estado.alarmaPM25",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1140,
+        "wires": [
+            [
+                "c1a1e20000000042"
+            ]
+        ],
+        "info": "Deja en msg.payload el booleano alarmaPM25 para el indicador LED."
+    },
+    {
+        "id": "c1a1e20000000040",
+        "type": "ui-switch",
+        "z": "c1a1e00000000002",
+        "name": "Switch ventilación",
+        "label": "Ventilación",
+        "group": "c1a1e0000000000d",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "encendida",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "#2e7d32",
+        "offvalue": "apagada",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "#9e9e9e",
+        "x": 780,
+        "y": 1040,
+        "wires": [
+            []
+        ],
+        "info": "Switch de solo lectura del estado de ventilación. Se enciende cuando el JSON trae ventilacion = encendida. La salida no se publica de vuelta al bróker."
+    },
+    {
+        "id": "c1a1e20000000041",
+        "type": "ui-led",
+        "z": "c1a1e00000000002",
+        "name": "LED alarma CO2",
+        "group": "c1a1e0000000000d",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "label": "Alarma CO₂",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "color": "#43a047",
+                "value": false,
+                "valueType": "bool"
+            },
+            {
+                "color": "#e53935",
+                "value": true,
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 780,
+        "y": 1100,
+        "wires": [],
+        "info": "Indicador booleano. Verde si alarmaCO2 es false y rojo si es true (CO₂ mayor a 1000 ppm)."
+    },
+    {
+        "id": "c1a1e20000000042",
+        "type": "ui-led",
+        "z": "c1a1e00000000002",
+        "name": "LED alarma PM2.5",
+        "group": "c1a1e0000000000d",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "label": "Alarma PM2.5",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "color": "#43a047",
+                "value": false,
+                "valueType": "bool"
+            },
+            {
+                "color": "#e53935",
+                "value": true,
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 780,
+        "y": 1160,
+        "wires": [],
+        "info": "Indicador booleano. Verde si alarmaPM25 es false y rojo si es true (PM2.5 mayor a 55 µg/m³)."
+    }
+]
